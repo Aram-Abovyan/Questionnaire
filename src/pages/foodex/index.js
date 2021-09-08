@@ -1,0 +1,1 @@
+export { FoodexPage } from './FoodexPage';

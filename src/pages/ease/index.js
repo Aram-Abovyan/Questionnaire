@@ -1,0 +1,1 @@
+export { EasePage } from './EasePage';
