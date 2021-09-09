@@ -1,4 +1,13 @@
 .main-page {
   height: 100%;
   background-image: url("../../assets/images/main_page/background.jpg");
+  padding: 80px;
+}
+
+img {
+  pointer-events: none;
+}
+
+.handle {
+  display: inline-block;
 }
