@@ -1,22 +1,54 @@
 import './main-page.css';
+import { useHistory } from "react-router-dom";
 import ease from '../../assets/images/main_page/easeSpaceShip.svg';
 import foodex from '../../assets/images/main_page/foodexSpaceShip.svg';
 import powercode from '../../assets/images/main_page/powercodeSpaceShip.svg';
 import catchArea from '../../assets/images/main_page/catchArea.svg';
-import { Svg } from "./Svg";
 import { Header } from "../../components/Header";
-import Draggable from 'react-draggable'; // The default
+import Draggable from 'react-draggable';
+
+// const defaultPositions = {
+//   ease: {
+//     x: 1000,
+//     y: 600,
+//   },
+
+//   foodex: {
+
+//   },
+
+//   powercode: {
+
+//   },
+// };
 
 export const MainPage = () => {
+  const history = useHistory();
 
   const stopHandler = (event) => {
-    // console.log('pageX', event.pageX);
-    // console.log('pageY', event.pageY);
-    // console.log('clientX', event.clientX);
-    // console.log('clientY', event.clientY);
-
     const catchAreaElement = document.querySelector('.catch-area');
-    console.dir(catchAreaElement);
+    const catchAreaCoordinates = catchAreaElement.getBoundingClientRect();
+
+    const spaceShipCoordinates = event.target.getBoundingClientRect();
+
+    if (spaceShipCoordinates.right < catchAreaCoordinates.left || spaceShipCoordinates.left > catchAreaCoordinates.right) return;
+    if (spaceShipCoordinates.top > catchAreaCoordinates.bottom || spaceShipCoordinates.bottom < catchAreaCoordinates.top) return;
+
+    switch (event.target.dataset.category) {
+      case 'ease':
+        history.push('/ease');
+        break;
+      
+      case 'foodex':
+        history.push('/foodex');
+        break;
+      
+      case 'powercode':
+        history.push('/powercode');
+        break;
+      
+      default:
+    }
   }
 
   return (
@@ -29,12 +61,12 @@ export const MainPage = () => {
            <img src={catchArea} />
          </div>
         }
-      />
+      />      
 
       <Draggable
           onStop={stopHandler}
       >
-        <div className="handle">
+        <div className="handle" data-category="ease" >
           <img src={ease} />
         </div>
       </Draggable>
@@ -42,7 +74,7 @@ export const MainPage = () => {
       <Draggable
         onStop={stopHandler}
       >
-        <div className="handle">
+        <div className="handle" data-category="foodex" >
           <img src={foodex} />
         </div>
       </Draggable>
@@ -50,7 +82,7 @@ export const MainPage = () => {
       <Draggable
         onStop={stopHandler}
       >
-        <div className="handle">
+        <div className="handle" data-category="powercode" >
           <img src={powercode} />
         </div>
       </Draggable>
