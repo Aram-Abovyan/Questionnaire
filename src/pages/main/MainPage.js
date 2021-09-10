@@ -1,11 +1,16 @@
 import './main-page.css';
+import { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import ease from '../../assets/images/main_page/easeSpaceShip.svg';
 import foodex from '../../assets/images/main_page/foodexSpaceShip.svg';
 import powercode from '../../assets/images/main_page/powercodeSpaceShip.svg';
 import catchArea from '../../assets/images/main_page/catchArea.svg';
 import { Header } from "../../components/Header";
-import Draggable from 'react-draggable';
+// import Draggable from 'react-draggable';
+import { gsap, Draggable } from "gsap/all";
+
+
+gsap.registerPlugin(Draggable);
 
 // const defaultPositions = {
 //   ease: {
@@ -25,7 +30,27 @@ import Draggable from 'react-draggable';
 export const MainPage = () => {
   const history = useHistory();
 
-  const stopHandler = (event) => {
+  useEffect(() => {
+    const tl = gsap.timeline()
+    .to('.handle', {
+      x: "random(-20, 20, 5)",
+      y: "random(-20, 10, 3)",
+      duration:1,
+      ease:"none",
+      repeat:-1,
+      repeatRefresh:true
+    });
+
+    Draggable.create(".handle",
+      {
+        type:"x,y",
+        edgeResistance:0.65,
+        inertia:true,
+        onDragEnd,
+      });
+  });
+
+  const onDragEnd = (event) => {
     const catchAreaElement = document.querySelector('.catch-area');
     const catchAreaCoordinates = catchAreaElement.getBoundingClientRect();
 
@@ -58,34 +83,22 @@ export const MainPage = () => {
          <div
            className="catch-area"
          >
-           <img src={catchArea} />
+           <img src={catchArea} alt="catch area"/>
          </div>
         }
       />      
 
-      <Draggable
-          onStop={stopHandler}
-      >
-        <div className="handle" data-category="ease" >
-          <img src={ease} />
-        </div>
-      </Draggable>
+      <div className="handle" data-category="ease" >
+        <img src={ease} alt="ease" />
+      </div>
 
-      <Draggable
-        onStop={stopHandler}
-      >
-        <div className="handle" data-category="foodex" >
-          <img src={foodex} />
-        </div>
-      </Draggable>
+      <div className="handle" data-category="foodex" >
+        <img src={foodex} alt="foodex" />
+      </div>
 
-      <Draggable
-        onStop={stopHandler}
-      >
-        <div className="handle" data-category="powercode" >
-          <img src={powercode} />
-        </div>
-      </Draggable>
+      <div className="handle" data-category="powercode" >
+        <img src={powercode} alt="powercode" />
+      </div>
     </div>
   );
 };

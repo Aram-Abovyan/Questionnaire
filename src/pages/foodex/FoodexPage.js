@@ -1,5 +1,9 @@
+import './foodex-page.css';
+
 export const FoodexPage = () => {
   return (
-    <h1>FoodexPage</h1>
+    <div className="foodex-page">
+
+    </div>
   );
 };
