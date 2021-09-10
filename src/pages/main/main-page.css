@@ -14,3 +14,15 @@ img {
 .handle {
   display: inline-block;
 }
+
+.spaceship-top-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.spaceship-bottom-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

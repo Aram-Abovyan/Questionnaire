@@ -12,29 +12,15 @@ import { gsap, Draggable } from "gsap/all";
 
 gsap.registerPlugin(Draggable);
 
-// const defaultPositions = {
-//   ease: {
-//     x: 1000,
-//     y: 600,
-//   },
-
-//   foodex: {
-
-//   },
-
-//   powercode: {
-
-//   },
-// };
-
 export const MainPage = () => {
+
   const history = useHistory();
 
   useEffect(() => {
     const tl = gsap.timeline()
     .to('.handle', {
-      x: "random(-20, 20, 5)",
-      y: "random(-20, 10, 3)",
+      x: 'random(-20, 20, 5)',
+      y: 'random(-20, 20, 5)',
       duration:1,
       ease:"none",
       repeat:-1,
@@ -86,19 +72,25 @@ export const MainPage = () => {
            <img src={catchArea} alt="catch area"/>
          </div>
         }
-      />      
+      /> 
 
-      <div className="handle" data-category="ease" >
-        <img src={ease} alt="ease" />
+      <div className="spaceship-top-area">
+        <div className="handle" data-category="foodex" >
+          <img src={foodex} alt="foodex" />
+        </div>
       </div>
 
-      <div className="handle" data-category="foodex" >
-        <img src={foodex} alt="foodex" />
-      </div>
+      <div className="spaceship-bottom-area">
+        <div id="powercode" className="handle" data-category="powercode" >
+          <img src={powercode} alt="powercode" />
+        </div>
 
-      <div className="handle" data-category="powercode" >
-        <img src={powercode} alt="powercode" />
+        <div id="ease" className="handle" data-category="ease" >
+          <img src={ease} alt="ease" />
+        </div>
       </div>
+      
+
     </div>
   );
 };
