@@ -90,7 +90,6 @@ export const MainPage = () => {
         </div>
       </div>
       
-
     </div>
   );
 };
