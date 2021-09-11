@@ -1,5 +1,7 @@
+import { StartingPage } from "../layouts/StartingPage";
+
 export const EasePage = () => {
   return (
-    <h1>EasePage</h1>
+    <StartingPage pageName="ease-page" />
   );
 };

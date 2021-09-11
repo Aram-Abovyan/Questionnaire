@@ -1,0 +1,7 @@
+.ease-page {
+  height: 100%;
+  background-image: url("../../assets/images/ease_page/background.png");
+  background-repeat: no-repeat;
+  /* background-size: auto; */
+  background-size: cover;
+}

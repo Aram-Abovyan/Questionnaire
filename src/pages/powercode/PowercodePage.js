@@ -1,5 +1,7 @@
+import { StartingPage } from "../layouts/StartingPage";
+
 export const PowercodePage = () => {
   return (
-    <h1>PowercodePage</h1>
+    <StartingPage pageName="powercode-page" />
   );
 };
