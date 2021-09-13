@@ -30,15 +30,15 @@ function App() {
         </Route>
 
         <Route exact path="/powercode-page-questions">
-          <QuestionPage />
+          <QuestionPage pageName="powercode" />
         </Route>
 
         <Route exact path="/foodex-page-questions">
-          <QuestionPage />
+          <QuestionPage pageName="foodex" />
         </Route>
 
         <Route exact path="/ease-page-questions">
-          <QuestionPage />
+          <QuestionPage pageName="ease" />
         </Route>
       </Switch>
     </div>

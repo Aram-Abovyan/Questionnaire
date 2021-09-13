@@ -1,6 +1,6 @@
 import { useHistory } from "react-router";
 
-export const Button = ({ text, pageName }) => {
+export const Button = ({ text, pageName, clickHandler }) => {
   const history = useHistory();
 
   const handleClick = (pageName) => () => {
@@ -9,7 +9,7 @@ export const Button = ({ text, pageName }) => {
 
   return (
     <button
-      onClick={handleClick(pageName)}
+      onClick={pageName ? handleClick(pageName) : clickHandler}
       className="foodex-page-button"
     >
       {text}
