@@ -3,6 +3,7 @@ import modalEmoji from '../assets/images/modal_window/modal-emoji.svg';
 import { v4 as uuidv4 } from 'uuid';
 import { Button } from '../components/Button';
 import { InfoPage } from '../pages/layouts/InfoPage';
+import { useHistory } from 'react-router';
 import '../pages/layouts/question-page.css';
 
 export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }) => {
@@ -11,6 +12,7 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
   const [checkedId, setCheckedId] = useState('');
   const [showModalWindow, setShowModalWindow] = useState(false);
   const [showRightAnswer, setShowRightAnswer] = useState(false);
+  const history = useHistory();
 
   const handleChange = (id) => () => {
     setCheckedId(id);
@@ -29,7 +31,10 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
 
     if ('' + corectAnswer === checkedId) {
 
+      setShowRightAnswer(true);
+
       if (questionIndex === questions.length - 1) {
+        history.push(`/${pageName}`)
         return;
       }
 
@@ -55,7 +60,9 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
 
       {
         showRightAnswer ? (<>
-          <InfoPage />
+          <InfoPage
+            setShowRightAnswer={setShowRightAnswer}
+          />
         </>) : ''
       }
       
