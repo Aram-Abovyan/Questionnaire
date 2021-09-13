@@ -1,0 +1,27 @@
+.question-page {
+  background-color: white;
+}
+
+.bg-left {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+}
+
+.bg-right {
+  position: absolute;
+  top: -32px;
+  right: -32px;
+}
+
+.header-logo {
+  margin-left: -32%;
+  height: 68%;
+}
+
+.bg-logo {
+  position: absolute;
+  right: 0px;
+  bottom: -18px;
+  width: 22%;
+}

@@ -24,7 +24,7 @@ export const StartingPage = ({ pageName }) => {
       default:
         return;
     }
-  }
+  };
   
   return (
     <div className={pageName}>
@@ -39,6 +39,7 @@ export const StartingPage = ({ pageName }) => {
         <img className="page-message" src={pageMessage} alt="message" />
         <Button 
           text="LETS START"
+          pageName={pageName}
         />
       </div>
     </div>

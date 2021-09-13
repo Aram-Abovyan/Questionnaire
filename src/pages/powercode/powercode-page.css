@@ -6,3 +6,9 @@
   background: linear-gradient(202.7deg, #13274F 5.6%, #031335 100.53%);
   /* transform: rotate(-90deg); */
 }
+
+.powercode-questions {
+  background: linear-gradient(140deg, #E6E9EF -35.22%, #FFFFFF 51.74%, #E6E9EF 125.88%);
+  position: relative;
+  height: 100%;
+}
