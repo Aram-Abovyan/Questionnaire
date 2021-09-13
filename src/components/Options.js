@@ -79,6 +79,5 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
         text="ANSWER"
       />
     </>
-    
   );
 }
