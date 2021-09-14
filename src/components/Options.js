@@ -5,6 +5,7 @@ import { Button } from '../components/Button';
 import { InfoPage } from '../pages/layouts/InfoPage';
 import { useHistory } from 'react-router';
 import '../pages/layouts/question-page.css';
+import { infoImages } from '../data/infoImages';
 
 export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }) => {
   const currentQuestion = questions.find((question, index) => index === questionIndex);
@@ -13,6 +14,10 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
   const [showModalWindow, setShowModalWindow] = useState(false);
   const [showRightAnswer, setShowRightAnswer] = useState(false);
   const history = useHistory();
+
+  const getInfoImageByPageNameAndIndex = (pageName, questionIndex) => {
+    return infoImages[`${pageName}${questionIndex}`];
+  }
 
   const handleChange = (id) => () => {
     setCheckedId(id);
@@ -61,6 +66,7 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
       {
         showRightAnswer ? (<>
           <InfoPage
+            image={getInfoImageByPageNameAndIndex(pageName, questionIndex - 1)}
             setShowRightAnswer={setShowRightAnswer}
           />
         </>) : ''

@@ -12,6 +12,7 @@ export const InfoPage = ({ setShowRightAnswer, image, text }) => {
       <div className="info-page-content">
         <img className="info-page-emoji" src={infoPageEmoji} alt="info page emoji" />
         <p>It's right!</p>
+        <img src={image} alt="" />
         <Button
           text="NEXT"
           clickHandler={() => {setShowRightAnswer(false)}}
