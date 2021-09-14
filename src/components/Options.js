@@ -39,7 +39,7 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
       setShowRightAnswer(true);
 
       if (questionIndex === questions.length - 1) {
-        history.push(`/${pageName}`)
+        history.push(`/${pageName}-completed`)
         return;
       }
 

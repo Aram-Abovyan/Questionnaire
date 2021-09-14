@@ -9,7 +9,7 @@ export const Button = ({ text, pageName, clickHandler }) => {
 
   return (
     <button
-      onClick={pageName ? handleClick(pageName) : clickHandler}
+      onClick={clickHandler ? clickHandler : handleClick(pageName)}
       className="foodex-page-button"
     >
       {text}

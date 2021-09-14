@@ -11,7 +11,7 @@ import pageMessageLight from '../../assets/images/page-message-light.svg';
 
 import { Button } from '../../components/Button';
 
-export const StartingPage = ({ pageName }) => {
+export const StartingPage = ({ pageName, buttonText, clickHandler, message }) => {
   const getLogoByPageName = (pageName) => {
     switch (pageName) {
       case 'foodex-page':
@@ -54,10 +54,11 @@ export const StartingPage = ({ pageName }) => {
           src={getLogoByPageName(pageName)}
           alt="logo"
         />
-        <img className="page-message" src={getMessageSvgByPageName(pageName)} alt="message" />
+        <img className="page-message" src={message ? message : getMessageSvgByPageName(pageName)} alt="message" />
         <Button 
-          text="LETS START"
+          text={buttonText ? buttonText : 'LETS START'}
           pageName={pageName}
+          clickHandler={clickHandler ? clickHandler : ''}
         />
       </div>
     </div>
