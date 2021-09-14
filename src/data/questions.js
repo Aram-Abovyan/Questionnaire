@@ -1,56 +1,60 @@
 export const ease= [
   {
-    question: 'Сколько весил первый в мире компьютер?',
+    question: 'How much did the first computer weigh?',
     options: [
       {
-        value: '500 кг.',
+        value: 'A. 500 kg',
         isCorect: false,
       },
 
       {
-        value: '27 т.',
+        value: 'B. 27 t',
         isCorect: true,
       },
 
       {
-        value: '987 кг.',
+        value: 'C. 987 kg',
         isCorect: false,
       },
 
       {
-        value: '17 т.',
+        value: 'D. 17 t',
         isCorect: false,
       },
     ],
+
+    info: `The very first computer ENIAC weighed over 27 tonnes and occupied 1800 square meters. About 3000 modern laptops fill the same amount of space.`,
   },
 
   {
-    question: 'В каком году отправлено первое SMS-сообщения?',
+    question: 'In what year the first SMS message was sent?',
     options: [
       {
-        value: '1991 г.',
+        value: 'A. 1991',
         isCorect: false,
       },
 
       {
-        value: '1992 г.',
+        value: 'B. 1992',
         isCorect: true,
       },
 
       {
-        value: '1993 г.',
+        value: 'C. 1993',
         isCorect: false,
       },
 
       {
-        value: '1994 г.',
+        value: 'D. 1994',
         isCorect: false,
       },
     ],
+
+    info: `December 3, 1992, was the day the first SMS message was sent. It happened in Great Britain, and it was the best wishes for the upcoming Christmas.`,
   },
 
   {
-    question: 'Как расшифровывается абревиатура WiFi ?',
+    question: 'What does WiFi stand for?',
     options: [
       {
         value: 'White Fiddle',
@@ -72,212 +76,233 @@ export const ease= [
         isCorect: false,
       },
     ],
+
+    info: `Initially, WiFi was promoted with The Standard for Wireless Fidelity slogan. Then, the technology received 
+    its name – Wireless Fidelity, which was shortened to WiFi.`,
   },
 
   {
-    question: 'От чего происходит слово “робот” ?',
+    question: 'What is the origin of the word “Robot”?',
     options: [
       {
-        value: 'Работа, карьера',
+        value: 'A. Work, career',
         isCorect: false,
       },
 
       {
-        value: 'Тяжелый труд, каторга',
+        value: 'B. Hard work, labor',
         isCorect: true,
       },
 
       {
-        value: 'Робототехника',
+        value: 'C. Robotics',
         isCorect: false,
       },
 
       {
-        value: 'Биоорганизм, создание человека',
+        value: 'D. Bio-organism, creating a person',
         isCorect: false,
       },
     ],
+
+    info: `The word “robot” comes from the word “robota,” which means hard labor. The Czech writer Karel Čapek first used it in his sci-fi play “R.U.R.” (1920). In the play, it meant artificially created organic “people” used by humanity for hard and dangerous work.`,
   },
 
   {
-    question: 'Что из бытовой техники изображено на фото ?',
+    question: 'What kind of terminator model did Arnold Schwarzenegger play in the second movie "Terminator"?',
     options: [
       {
-        value: 'Тостер',
+        value: 'A. T-1000',
+        isCorect: false,
+      },
+
+      {
+        value: 'B. T-800',
         isCorect: true,
       },
 
       {
-        value: 'Утюг',
+        value: 'C. T-600',
         isCorect: false,
       },
 
       {
-        value: 'Микроволновка',
-        isCorect: false,
-      },
-
-      {
-        value: 'Фен',
+        value: 'D. Cyberdyne Systems 101',
         isCorect: false,
       },
     ],
+
+    info: `In the second part of the film Terminator, Arnold Schwarzenegger played a T-800 terminator robot. T-800 is the most massive series of terminators. And this is the first robot whose endoskeleton is covered with artificial skin identical to that of a human, making the T-800 indistinguishable from a human.`,
   },
 
   {
-    question: 'Сколько времени на поверхности Луны провели Нил Армстронг и пилот Базз Олдрин?',
+    question: 'How much time Neil Armstrong and Buzz Aldrin spent on the moon?',
     options: [
       {
-        value: '17 часов 45 минут и 32 секунды',
+        value: 'A. 17 hours, 45 minutes, and 32 seconds',
         isCorect: false,
       },
 
       {
-        value: '23 часа 14 минут и 12 секунд',
+        value: 'B. 23 hours, 14 minutes, and 12 seconds',
         isCorect: false,
       },
 
       {
-        value: '19 часов 38 минут и 28 секунд',
+        value: 'C. 19 hours, 38 minutes, and 28 seconds',
         isCorect: false,
       },
 
       {
-        value: '21 час 36 минут и 21 секунду',
+        value: 'D. 21 hours, 36 minutes, and 21 seconds',
         isCorect: true,
       },
     ],
+
+    info: `On July 20, 1969, at 20:17:39 UTC, crew commander Neil Armstrong and the pilot Buzz Aldrin climbed out of the lunar module and descended onto the Sea of Tranquility. They stayed on the Moon surface for 21 hours, 36 minutes, and 21 seconds. All this time, command module pilot Michael Collins waited for them in lunar orbit.`,
   },
 ];
 
 export const powercode= [
   {
-    question: '6 августа 1991 года появился Первый в мире веб сайт. В какой это было стране?',
+    question: 'The first website went live on August 6, 1991. In what country?',
     options: [
       {
-        value: 'США',
+        value: 'A. USA',
         isCorect: false,
       },
 
       {
-        value: 'Нидерланды',
+        value: 'B. The Netherlands',
         isCorect: false,
       },
 
       {
-        value: 'Швейцария',
+        value: 'C. Switzerland',
         isCorect: true,
       },
 
       {
-        value: 'Германия',
+        value: 'D. Germany',
         isCorect: false,
       },
     ],
+
+    info: `The first website ever made info.cern.ch went live on August 6, 1991. Its creator, Tim Berners-Lee, published there the description of the new World Wide Web technology that was based on the HTTP data transfer protocol, URI addressing system, and HTML hypertext markup language.`,
   },
 
   {
-    question: 'Какое количество людей на планете имеет подключение к сети?',
+    question: 'How many people on the planet have access to the internet?',
     options: [
       {
-        value: '4,05 млрд',
+        value: 'A. 4,05 billion',
         isCorect: true,
       },
 
       {
-        value: '2,3 млрд',
+        value: 'B. 2,3 billion ',
         isCorect: false,
       },
 
       {
-        value: '6,08 млрд',
+        value: 'C. 6,08 billion',
         isCorect: false,
       },
 
       {
-        value: '5, 7 млрд',
+        value: 'D. 5,7 billion',
         isCorect: false,
       },
     ],
+
+    info: `4,05 billion out of about 7 billion people on the planet use the internet. In 2021, 45,4% of the population 
+    (about 3,3 billion) still have no access to the internet. The majority of them live in the least developed countries.`
   },
 
   {
-    question: 'О чем было первое видео залитое на Youtube?',
+    question: 'What was the first YouTube video about?',
     options: [
       {
-        value: 'Речь Стива Джобса на презинтации первого iPhone',
+        value: 'A. Steve Jobs iPhone introduction speech',
         isCorect: false,
       },
 
       {
-        value: 'Один из разработчиков PayPal Джавед Карим изучает слонов в зоопарке',
+        value: 'B. Jawed Karim, one of the PayPal developers, watches elephants at the zoo',
         isCorect: true,
       },
 
       {
-        value: 'Мальчик с Мичигана отбирает в енота сендвич',
+        value: 'C. A boy from Michigan takes a sandwich away from a raccoon',
         isCorect: false,
       },
 
       {
-        value: 'Сергей Брин получает диплом по окончание стендфорда',
+        value: 'D. Sergey Brin graduates from Stanford University',
         isCorect: false,
       },
     ],
+
+    info: 'The very first video is the 18-second video of Jawed Karim at the San Diego Zoo that was published on YouTube on April 23, 2005, at 20:27 local time.',
   },
 
   {
-    question: 'Сколько времени тратят все пользователи сети на Facebook в день?',
+    question: 'How much time a day do all internet users spend on Facebook?',
     options: [
       {
-        value: 'около 7 млн.минут',
+        value: 'A. About 7M minutes',
         isCorect: false,
       },
 
       {
-        value: 'около 10 млрд. минут',
+        value: 'B. About 10B minutes',
         isCorect: false,
       },
 
       {
-        value: 'около 6 млрд.минут',
+        value: 'C. About 6B minutes',
         isCorect: true,
       },
 
       {
-        value: 'около 90 млн.минут',
+        value: 'D. About 90M minutes',
         isCorect: false,
       },
     ],
+
+    info: `Facebook users spend about 6 billion minutes on this social network. It’s about 35 minutes a day 
+    spent by each user.`
   },
 
   {
-    question: 'Сколько продуктов продается на сайте Amazon ежегодно?',
+    question: 'How many products are sold on Amazon annually?',
     options: [
       {
-        value: 'более 5 млрд.',
+        value: 'A. Over 5 billion',
         isCorect: true,
       },
 
       {
-        value: 'более 7 млрд.',
+        value: 'B. Over 7 billion',
         isCorect: false,
       },
 
       {
-        value: 'более 2 млрд.',
+        value: 'C. Over 2 billion',
         isCorect: false,
       },
 
       {
-        value: 'более 10 млрд.',
+        value: 'D. Over 10 billion',
         isCorect: false,
       },
     ],
+
+    info: `Over 5 billion products are sold on Amazon each year. It’s more than 28 million buyers and over 3 million shipments per day.`,
   },
 
   {
-    question: 'Какой самый популярный сайт в мире после Google?',
+    question: 'What is the second most popular website?',
     options: [
       {
         value: 'Facebook',
@@ -299,157 +324,174 @@ export const powercode= [
         isCorect: false,
       },
     ],
+
+    info: `While Google is the most popular website, YouTube is in second place. YouTube is the world’s most popular resource for video entertainment, and no wonder it has such a high position. In fact, this position is supported by the fact that over 500 hours of video content are uploaded to the website each minute. Over 1 billion videos are watched daily.`,
   },
 ];
 
 export const foodex= [
   {
-    question: 'В какой стране впервые появилась доставка еды?',
+    question: 'In what country food delivery appeared?',
     options: [
       {
-        value: 'США',
+        value: 'A. USA',
         isCorect: false,
       },
 
       {
-        value: 'Германия ',
+        value: 'B. Germany ',
         isCorect: false,
       },
 
       {
-        value: 'Франция',
+        value: 'C. France',
         isCorect: false,
       },
 
       {
-        value: 'Индия',
+        value: 'D. India',
         isCorect: true,
       },
     ],
+
+    info: `This may surprise you, but the history of food delivery as a separate market segment doesn’t have a western origin. India was the pioneer in this field. In the 19th century, the Dabbawala profession appeared – men delivered food in unique metal dishes named Dabba.`,
   },
 
   {
-    question: 'В каком году появился первый интернет-магазин?',
+    question: 'When was the first online store created?',
     options: [
       {
-        value: '1989 г.',
+        value: 'A. 1989',
         isCorect: false,
       },
 
       {
-        value: '1992 г.',
+        value: 'B. 1992',
         isCorect: true,
       },
 
       {
-        value: '2000 г.',
+        value: 'C. 2000',
         isCorect: false,
       },
 
       {
-        value: '2001 г.',
+        value: 'D. 2001',
         isCorect: false,
       },
     ],
+
+    info: `Charles Stack created the first online store in 1992. His website books.com sold books. Then, in 1994, 
+    Amazon was launched, the one we all know today, and a year later, another famous and beloved 
+    internet platform appeared – eBay.`,
   },
 
   {
-    question: 'Какой продукт является самым продаваемым в мире ?',
+    question: 'What is the world’s best-selling product?',
     options: [
       {
-        value: 'Кофе',
+        value: 'A. Coffee',
         isCorect: false,
       },
 
       {
-        value: 'Смартфоны ',
+        value: 'B. Smartphones',
         isCorect: false,
       },
 
       {
-        value: 'Автомобили',
+        value: 'C. Vehicles',
         isCorect: false,
       },
 
       {
-        value: 'Бензин',
+        value: 'D. Petrol',
         isCorect: true,
       },
     ],
+
+    info: `The world’s best-selling product is petrol, yet coffee keeps up. Every year, coffee sellers earn $2 billion 
+    on this product.`,
   },
 
   {
-    question: 'Какой мировой рекорд доставки онлайн-покупок ?',
+    question: 'What is the world’s online shopping delivery record?',
     options: [
       {
-        value: '345 млн. посылок за 1 сутки',
+        value: 'A. 345 mln. packages in 1 day',
         isCorect: true,
       },
 
       {
-        value: '500 млн. посылок за неделю ',
+        value: 'B. 500 mln. packages in 1 week',
         isCorect: false,
       },
 
       {
-        value: '200 млн. посылок за 2 дня',
+        value: 'C. 200 mln. packages in 2 days',
         isCorect: false,
       },
 
       {
-        value: '450 млн. посылок за месяц',
+        value: 'D. 450 mln. packages in a month',
         isCorect: false,
       },
     ],
+
+    info: `The Chinese logistics companies managed to deliver 345 million online purchases within one day – November 14. As a result, World Shopping Day has a new sales record.`,
   },
 
   {
-    question: 'Сколько посещений в день насчитывает крупнейший в мире интернет-аукцион Ebay ?',
+    question: 'How many daily visits does eBay have?',
     options: [
       {
-        value: '180 млн. раз',
+        value: 'A. 180 mln. visits',
         isCorect: false,
       },
 
       {
-        value: '240 млн.раз ',
+        value: 'B. 240 mln. visits',
         isCorect: false,
       },
 
       {
-        value: '360 млн.раз',
+        value: 'C. 360 mln. visits',
         isCorect: true,
       },
 
       {
-        value: '430 млн.раз',
+        value: 'D. 430 mln. visits',
         isCorect: false,
       },
     ],
+
+    info: `Every day, eBay has 360 mln. visits and 177 mln. buyers.`,
   },
 
   {
-    question: 'Какая была первая онлайн-продажа ?',
+    question: 'D. 430 mln. visits',
     options: [
       {
-        value: 'Книга',
+        value: 'A. Book',
         isCorect: false,
       },
 
       {
-        value: 'Джинсы ',
+        value: 'B. Jeans ',
         isCorect: false,
       },
 
       {
-        value: 'Компакт-диск',
+        value: 'C. Compact disc',
         isCorect: true,
       },
 
       {
-        value: 'Кукуруза',
+        value: 'D. Corn',
         isCorect: false,
       },
     ],
+
+    info: `The first safe online transaction happened on August 11, 1994. The founder of the NetMarket online marketplace, Dan Kohn, sold a compact disk to his friend. The buyer paid with a credit card.`,
   },
 ];

@@ -26,6 +26,10 @@ export const QuestionPage = ({ pageName }) => {
     }
   }
 
+  const getBgLeftByPageName = (pageName) => {
+    
+  }
+
   const [questions, setQuestions] = useState(JSON.parse(localStorage.getItem(pageName)));
   const [questionIndex, setQuestionIndex] = useState(0);
 

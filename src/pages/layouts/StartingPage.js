@@ -6,7 +6,9 @@ import smile from '../../assets/images/smile.svg';
 import foodexLogo from '../../assets/images/foodex_page/foodex-logo.svg';
 import easeLogo from '../../assets/images/ease_page/ease-logo.svg';
 import powercodeLogo from '../../assets/images/powercode_page/powercode-logo.svg';
-import pageMessage from '../../assets/images/page-message.svg';
+import pageMessageDark from '../../assets/images/page-message-dark.svg';
+import pageMessageLight from '../../assets/images/page-message-light.svg';
+
 import { Button } from '../../components/Button';
 
 export const StartingPage = ({ pageName }) => {
@@ -25,6 +27,22 @@ export const StartingPage = ({ pageName }) => {
         return;
     }
   };
+
+  const getMessageSvgByPageName = (pageName) => {
+    switch (pageName) {
+      case 'foodex-page':
+        return pageMessageDark;
+
+      case 'ease-page':
+        return pageMessageLight;
+
+      case 'powercode-page':
+        return pageMessageLight;
+
+      default:
+        return;
+    }
+  };
   
   return (
     <div className={pageName}>
@@ -36,7 +54,7 @@ export const StartingPage = ({ pageName }) => {
           src={getLogoByPageName(pageName)}
           alt="logo"
         />
-        <img className="page-message" src={pageMessage} alt="message" />
+        <img className="page-message" src={getMessageSvgByPageName(pageName)} alt="message" />
         <Button 
           text="LETS START"
           pageName={pageName}

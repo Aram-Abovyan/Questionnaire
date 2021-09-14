@@ -52,7 +52,7 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
           <div className="modal-window">
             <img className="modal-emoji" src={modalEmoji} alt="emoji" />
             <p className="modal-text">Alas... The answer is wrong</p>
-            <a href={`/${pageName}`}>try again</a>
+            <a href={`/${pageName}`}>Let's try again</a>
           </div>
           <div className="blocked-background"></div>
         </>) : ''
