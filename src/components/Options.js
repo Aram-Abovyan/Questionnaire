@@ -72,10 +72,10 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
         </>) : ''
       }
       
-      <div className="question">
+      <div className={pageName === 'ease' ? 'question-light' : 'question-dark'}>
         {currentQuestion.question}
       </div>
-      <div className="options">
+      <div className={pageName === 'ease' ? 'options-light' : 'options-dark'}>
         <ul>
           {optionComponents}
         </ul>
