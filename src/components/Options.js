@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import modalEmoji from '../assets/images/modal_window/modal-emoji.svg';
+import powercodeModalEmoji from '../assets/images/powercode_page/wrong-emoji.svg';
+import easeModalEmoji from '../assets/images/ease_page/wrong-emoji.svg';
+import foodexModalEmoji from '../assets/images/foodex_page/wrong-emoji.svg';
 import { v4 as uuidv4 } from 'uuid';
 import { Button } from '../components/Button';
 import { InfoPage } from '../pages/layouts/InfoPage';
@@ -21,6 +23,22 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
 
   const handleChange = (id) => () => {
     setCheckedId(id);
+  }
+
+  const getModalEmojiByPageName = (pageName) => {
+    switch(pageName) {
+      case 'ease':
+        return easeModalEmoji;
+      
+      case 'foodex':
+        return foodexModalEmoji;
+
+      case 'powercode':
+        return powercodeModalEmoji;
+
+      default:
+        return;
+    }
   }
 
   const optionComponents = currentQuestion.options.map(({ value }, index) => (
@@ -54,12 +72,12 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
     <>
       {
         showModalWindow ? (<>
-          <div className="modal-window">
-            <img className="modal-emoji" src={modalEmoji} alt="emoji" />
+          <div className={`modal-window ${pageName === 'ease' ? 'modal-window-dark' : 'modal-window-light'}`}>
+            <img className="modal-emoji" src={getModalEmojiByPageName(pageName)} alt="emoji" />
             <p className="modal-text">Alas... The answer is wrong</p>
-            <a href={`/${pageName}`}>Let's try again</a>
+            <a className={pageName === 'ease' ? 'modal-window-link-light' : ''} href={`/${pageName}`}>Let's try again</a>
           </div>
-          <div className="blocked-background"></div>
+          <div className={`blocked-background ${pageName === 'ease' ? 'blocked-background-dark' : 'blocked-background-light'}`}></div>
         </>) : ''
       }
 
@@ -68,6 +86,8 @@ export const Options = ({ questions, questionIndex, setQuestionIndex, pageName }
           <InfoPage
             image={getInfoImageByPageNameAndIndex(pageName, questionIndex - 1)}
             setShowRightAnswer={setShowRightAnswer}
+            text={currentQuestion.info}
+            pageName={pageName}
           />
         </>) : ''
       }

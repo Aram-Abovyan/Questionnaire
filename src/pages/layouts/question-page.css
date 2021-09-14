@@ -51,8 +51,15 @@
   border-radius: 30px;
   width: 25%;
   height: 30%;
-  background-color: white;
   z-index: 1001;
+}
+
+.modal-window-light {
+  background-color: white;
+}
+
+.modal-window-dark {
+  background: #001237;
 }
 
 .modal-window > a {
@@ -65,14 +72,25 @@
   color: #09006D;
 }
 
+.modal-window-link-light {
+  color: #FFFFFF !important;
+}
+
 .blocked-background {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0px;
-  background: rgba(0, 47, 24, 0.6);
   backdrop-filter: blur(29px);
   z-index: 1000; 
+}
+
+.blocked-background-light {
+  background: rgba(0, 47, 24, 0.6);
+}
+
+.blocked-background-dark {
+  background: rgba(0, 22, 67, 0.8);
 }
 
 .modal-emoji {

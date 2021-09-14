@@ -1,9 +1,16 @@
 .info-page {
-  background-color: #E6E9EF ;
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0px;
+}
+
+.info-page-light {
+  background-color: #E6E9EF;
+}
+
+.info-page-dark {
+  background-color: #001237;
 }
 
 .info-page-content {
@@ -16,7 +23,11 @@
   align-items: center;
 }
 
-.info-page-content > p {
+.info-page-content > img {
+  margin-bottom: 1%;
+}
+
+.info-message {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
@@ -29,4 +40,24 @@
 .info-page-emoji {
   margin-top: 2%;
   height: 10%;
+}
+
+.info-text-dark {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  text-align: center;
+  color: #09006D;
+}
+
+.info-text-light {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  text-align: center;
+  color: #FFFFFF;
 }
